@@ -4,7 +4,7 @@ export default function Head() {
             <title>Web que venden! - Sergio Scardigno</title>
             <meta
                 name="description"
-                content="web que venden por Sergio Scardigno - Content Creator"
+                content="Web que venden por Sergio Scardigno - Content Creator"
             />
             <link rel="icon" href="/favicon.ico" />
             <meta
