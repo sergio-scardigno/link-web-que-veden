@@ -1,6 +1,14 @@
-# LinktreeClone
+# Web que venden
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Un proyecto personal de links para redes sociales, similar a Linktree, construido con Next.js. Conecta con tus redes sociales como YouTube, Twitch, LinkedIn y más.
+
+## Características
+
+- ✨ Interfaz moderna y responsiva
+- 🔗 Enlaces a redes sociales personalizables
+- 📝 Blog integrado con carga de contenido desde API (Strapi)
+- 📱 Optimizado para móviles
+- 🎨 Diseño con Tailwind CSS
 
 ## Getting Started
 
