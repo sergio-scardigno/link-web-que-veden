@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 function TwitchIcon() {
@@ -132,6 +134,20 @@ function LinkCard({
     );
 }
 
+function WebsiteButton({ href, title }: { href: string; title: string }) {
+    return (
+        <a
+            href={href}
+            className="flex items-center justify-center w-full rounded-3xl mb-4 
+      bg-gray-100 text-orange-600 font-bold text-lg py-4 px-8 
+      transition-all hover:scale-[1.02] hover:shadow-[3px_3px_6px_rgba(0,0,0,0.05),_-3px_-3px_6px_rgba(255,255,255,0.85)] 
+      max-w-3xl cursor-pointer shadow-[4px_4px_8px_rgba(0,0,0,0.08),_-4px_-4px_8px_rgba(255,255,255,0.7)]"
+        >
+            <h2 className="text-center">{title}</h2>
+        </a>
+    );
+}
+
 const data: Data = {
     name: 'Web que venden!',
     avatar: '/img/logo.png',
@@ -200,9 +216,13 @@ export default function HomePage() {
                 {data.name}
             </h1>
 
+
             {data.links.map((link) => (
                 <LinkCard key={link.href} {...link} />
             ))}
+
+<WebsiteButton href="https://web-que-venden-sergio-scardigno.vercel.app/" title="🌐 Sitio Web" />
+
 
             <div className="flex items-center gap-4 mt-8 text-white">
                 {data.socials.map((social) => {
@@ -221,6 +241,8 @@ export default function HomePage() {
                     return null;
                 })}
             </div>
+
+
         </div>
     );
 }
