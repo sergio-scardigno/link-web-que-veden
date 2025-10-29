@@ -82,6 +82,46 @@ function TikTokIcon() {
     );
 }
 
+function InstagramIcon() {
+    return (
+        <a href="https://www.instagram.com/web.que.venden">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <title>Instagram</title>
+                <path
+                    d="M12 0C8.741 0 8.332.014 7.052.072 5.775.13 4.548.398 3.545 1.4 2.542 2.403 2.274 3.63 2.216 4.908 2.158 6.188 2.144 6.597 2.144 12c0 5.403.014 5.812.072 7.092.058 1.277.326 2.504 1.329 3.507.993.993 2.22 1.261 3.497 1.319 1.28.058 1.689.072 7.092.072 5.403 0 5.812-.014 7.092-.072 1.277-.058 2.504-.326 3.497-1.319.993-1.003 1.261-2.23 1.319-3.507.058-1.28.072-1.689.072-7.092 0-5.403-.014-5.812-.072-7.092-.058-1.277-.326-2.504-1.319-3.507C21.092.398 19.865.13 18.588.072 17.308.014 16.899 0 12 0zm0 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.34 3.608 1.315.975.975 1.253 2.242 1.315 3.608.058 1.266.069 1.645.069 4.85 0 3.204-.012 3.584-.069 4.85-.062 1.366-.34 2.633-1.315 3.608-.975.975-2.242 1.253-3.608 1.315-1.266.058-1.645.069-4.85.069-3.204 0-3.584-.012-4.85-.069-1.366-.062-2.633-.34-3.608-1.315-.975-.975-1.253-2.242-1.315-3.608C2.175 15.747 2.163 15.368 2.163 12c0-3.204.012-3.584.07-4.85.062-1.366.34-2.633 1.315-3.608.975-.975 2.242-1.253 3.608-1.315 1.266-.058 1.646-.069 4.85-.069zm0 3.675a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"
+                    fill="currentColor"
+                />
+            </svg>
+        </a>
+    );
+}
+
+function FacebookIcon() {
+    return (
+        <a href="https://www.facebook.com/web.que.venden">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <title>Facebook</title>
+                <path
+                    d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.037 4.388 11.036 10.125 11.962v-8.457H7.078v-3.505h3.047V9.412c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.512c-1.49 0-1.953.926-1.953 1.874v2.268h3.328l-.532 3.505h-2.796v8.457C19.612 23.109 24 18.11 24 12.073z"
+                    fill="currentColor"
+                />
+            </svg>
+        </a>
+    );
+}
+
 type Data = {
     name: string;
     avatar: string;
@@ -158,6 +198,16 @@ const data: Data = {
             image: '/img/tiktok.png',
         },
         {
+            href: 'https://www.instagram.com/web.que.venden',
+            title: 'Instagram',
+            image: '/img/instagram.png',
+        },
+        {
+            href: 'https://www.facebook.com/websquevenden',
+            title: 'Facebook',
+            image: '/img/facebook.png',
+        },
+        {
             href: 'https://www.youtube.com/@websquevenden',
             title: 'YouTube',
             image: '/img/youtube.png',
@@ -194,6 +244,14 @@ const data: Data = {
         {
             href: 'https://www.linkedin.com/in/sergio-scardigno/',
             title: 'LinkedIn',
+        },
+        {
+            href: 'https://www.instagram.com/web.que.venden/',
+            title: 'Instagram',
+        },
+        {
+            href: 'https://www.facebook.com/web.que.venden',
+            title: 'Facebook',
         },
     ],
 };
@@ -237,6 +295,12 @@ export default function HomePage() {
                     }
                     if (social.href.includes('linkedin')) {
                         return <LinkedInIcon key={social.href} />;
+                    }
+                    if (social.href.includes('instagram')) {
+                        return <InstagramIcon key={social.href} />;
+                    }
+                    if (social.href.includes('facebook')) {
+                        return <FacebookIcon key={social.href} />;
                     }
                     return null;
                 })}
